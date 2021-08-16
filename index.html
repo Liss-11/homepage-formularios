@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Animaciones prediseñadas CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--   Iconos CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <title>NessaOdon Fotografia</title>
+</head>
+<body>
+       
+    <div class="container-fluid d-inline-block justify-content-end p-3 fondo">
+        <div class="d-block float-end mt-2">
+            <a href="#" class="btn btn-dark btn-sm" role="button" data-bs-toggle="button">Español</a>
+            <a href="#" class="btn btn-dark btn-sm" role="button" data-bs-toggle="button">Inglés</a>
+            <a href="#" class="btn btn-dark btn-sm" role="button" data-bs-toggle="button">Ruso</a>
+        </div>
+    </div>
+    <header class="container-fluid ">
+        <div class="container-fluid row d-flex justify-content-around m-1 mb-5 ">
+            <nav class="navbar d-block navbar-light p-1 col-12">
+                <div class="container-fluid barra-menu">
+                    <button class="navbar-toggler btn-sm btn-outline-primary esconde" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav nav-fill w-100 ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">HOME</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">SOBRE MI</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">RETRATOS</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">BODAS Y EVENTOS</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">PRODUCTOS COMERCIALES</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">FOTOS FAMILIARES</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">CONTACTO</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="enlaces">BLOG</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="d-flex col-12 col-md-3 col-lg-3 me-auto imagen">
+                <img src="fotos/Logo.jpg" class="rounded animate__animated animate__zoomIn " alt="logo">
+            </div>
+            <figure class="col-12 col-md-7 col-lg-7 align-self-center text-center p-2">
+                    <blockquote class="blockquote animate__animated animate__fadeInDownBig">
+                        <p>"La fotografía es el arte de captar para siempre un fugaz y único momento de nuestras vidas"</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer animate__animated animate__bounceInLeft">
+                        <cite title="Source Title">Nessa Odón</cite>
+                    </figcaption>
+            </figure>   
+            <!-- Login y Registro -->             
+            <div class="col-12 col-md-2 col-lg-2 btn-group-vertical m-auto">
+                <!-- LOGIN -->
+                <button type="button" class="btn btn-primary mb-3 btn-sm" data-bs-toggle="modal" data-bs-target="#usuarioModal">
+                    Usuario
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="usuarioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="usuarioLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title " id="usuarioLabel">Usuario</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container usuarioValidacion">
+                                    <form method="POST" action="registrado.html" id="usuarioId" onsubmit="return validacionUsuario()" name="usuario">
+                                        <div class="form-row">
+                                            <div class="form-group mb-3">
+                                                <label for="inputEmail1">Email</label>
+                                                <input type="email" name="inputEmail1" class="form-control" id="inputEmail1">
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="inputPassword1">Contraseña</label>
+                                                <input type="password" name="inputPassword1" class="form-control" id="inputPassword1">
+                                            </div>
+                                        </div>
+                                        <div class="d-inline-block float-end">
+                                            <button type="button" class="btn btn-secondary m-3" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary" id="btn_usuario">Entrar</button>
+                                        </div>
+                                    </form>
+                                </div> 
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+
+               <!--  REGISTRO -->
+               
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#registro">
+                    Registrarse
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="registro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="registroLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="registroLabel">Rellena el Formulario</h2> 
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                   <form method="POST" action="registrado.html" id="FormId" onsubmit="return validacionRegistro()" name="Form">
+                                        <div class="form-row">
+                                            <div class="form-group mb-3">
+                                                <label for="inputName">Nombre</label>
+                                                <input type="text" name="inputName" class="form-control" id="inputName">
+                                                <div class="invalid-feedback" id="errorName"></div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="inputApellido">Apellido</label>
+                                                <input type="text" name="inputApellido" class="form-control" id="inputApellido">
+                                                <div class="invalid-feedback" id="errorApellido"></div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="inputEmail">Email</label>
+                                                <input type="text" name="inputEmail" class="form-control" id="inputEmail">
+                                                <div class="invalid-feedback" id="errorEmail"></div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="inputPassword">Contraseña</label>
+                                                <input type="password" name="inputPassword" class="form-control" id="inputPassword">
+                                                <div class="invalid-feedback" id="errorPassword"></div>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="inputPasswordRep">Repite contraseña</label>
+                                                <input type="password" name="inputPassword" class="form-control" id="inputPasswordRep">
+                                                <div class="invalid-feedback" id="errorPasswordRep"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-8 mb-3">
+                                                <label for="inputProvince">Provincia</label>
+                                                <select id="inputProvince" class="form-control">
+                                                    <option selected value=""></option>
+                                                    <option>Barcelona</option>
+                                                    <option>Girona</option>
+                                                    <option>Tarragona</option>
+                                                    <option>Lleida</option>
+                                                </select>
+                                                <div class="invalid-feedback" id="errorProvince"></div>
+                                            </div>
+                                            <div class="form-group col-md-8 mb-3">
+                                                <label for="inputCity">Ciudad</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                                <div class="invalid-feedback" id="errorCity"></div>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                <label for="inputZip">Codigo Postal</label>
+                                                <input type="text" class="form-control" id="inputZip">
+                                                <div class="invalid-feedback" id="errorZip"></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                    He leido y acepto la politica de privacidad
+                                                </label>
+                                                <div class="invalid-feedback" id="errorCheck"></div>
+                                            </div>
+                                        </div>
+                                        <div class="d-inline-block float-end">
+                                            <button type="button" class="btn btn-secondary m-3" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Enlaces a las disitintas especialidades -->
+        <nav class="navbar navbar-expand-md navbar-light p-1 esconder d-md-block">
+            <div class="container-fluid barra-menu ">               
+                    <ul class="navbar-nav nav-fill w-100">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">HOME</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">SOBRE MI</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">RETRATOS</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">BODAS Y EVENTOS</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">PRODUCTOS COMERCIALES</span></a>
+                        </li><li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">FOTOS FAMILIARES</span></a>
+                        </li><li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">CONTACTO</span></a>
+                        </li><li class="nav-item">
+                            <a class="nav-link" href="#"><span class="enlaces">BLOG</span></a>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+            </div>
+        </nav>
+    </header>
+    <!-- Slider de fotos Home -->
+    <section class="container mt-md-5 mb-4 ">
+        <div id="carouselHome" class="carousel slide slider" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="3" 
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Fotos/Fiestas2.jpg" class="d-block w-100 img-thumbnail" alt="Fiestas2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Embaraç3.jpg" class="d-block w-100 img-thumbnail" alt="Embaraç3">
+                </div>
+                <div class="carousel-item">
+                    <img src="Fotos/Candela - Campo de Flores2.JPG" class="d-block w-100 img-thumbnail" alt="Candela">
+                </div>
+                <div class="carousel-item">
+                    <img src="Fotos/Embaraç2.jpg" class="d-block w-100 img-thumbnail" alt="Embaraç2">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHome"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <article class="container-fluid d-flex justify-content-start p-4 HomeComentario " >
+        <div class="">
+            <span >
+            "Igual que los ojos de uno, no ven la misma imagen que los ojos de otro,</br>
+            La camara de cada fotógrafo es capaz de de captar cosa únicas."
+            </span>
+        </div>
+
+    </article>
+        <div class="container">
+            <div class="row">
+            <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link">
+                <div class="fotos retratos rounded d-block">
+               <!--  El texto que aparece al poner el cursor, en cada foto-link -->  
+                    <div class="hidden text-center p-5">
+                    <h3>RETRATOS</h3>
+                            <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium consequatur? Assumenda dolore 
+                                nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum distinctio? Exercitationem, vel dolorum.</p>
+                    </div>
+                </div>
+            </a>
+            <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link">
+                <div class="fotos bodas rounded d-block">
+                    <div class="hidden text-center p-5">
+                        <h3>RETRATOS</h3>
+                        <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium consequatur?
+                            Assumenda dolore
+                            nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum distinctio?
+                            Exercitationem, vel dolorum.</p>
+                    </div>
+                </div>
+            </a>
+            <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link">
+                <div class="fotos productos rounded d-block">
+                    <div class="hidden text-center p-5">
+                        <h3>RETRATOS</h3>
+                        <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium consequatur?
+                            Assumenda dolore
+                            nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum distinctio?
+                            Exercitationem, vel dolorum.</p>
+                    </div>
+                </div>
+            </a>
+            <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link">
+                <div class="fotos familia rounded d-block">
+                    <div class="hidden text-center p-5">
+                        <h3>RETRATOS</h3>
+                        <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium consequatur?
+                            Assumenda dolore
+                            nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum distinctio?
+                            Exercitationem, vel dolorum.</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>        
+        <article class="container-fluid colaboradores">
+                    <div class="row justify-content-center p-4 ">
+                        <div class="d-block text-center col-12">
+                            <span>
+                                "Creemos en los profesionales que tenemos cerca y queremos potenciar el comercio del barrio"
+                            </span>
+                        </div>
+                        <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link1">
+                            <div class="fotos peluqueria d-block bg-success">
+                                <!--  El texto que aparece al poner el cursor, en cada foto-link -->
+                                <div class="hidden text-center p-5">
+                                    <h3>PELUQUERIA</h3>
+                                    <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium
+                                        consequatur? Assumenda dolore
+                                        nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum
+                                        distinctio? Exercitationem, vel dolorum.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link1">
+                            <div class="fotos decoración d-block bg-info">
+                                <div class="hidden text-center p-5">
+                                    <h3>DECORACIÓN</h3>
+                                    <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium
+                                        consequatur?
+                                        Assumenda dolore
+                                        nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum
+                                        distinctio?
+                                        Exercitationem, vel dolorum.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="#" class="d-flex col-12 col-md-6 justify-content-center link1 ">
+                            <div class="fotos moda d-block bg-danger">
+                                <div class="hidden text-center p-5 ">
+                                    <h3>MODA</h3>
+                                    <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium
+                                        consequatur?
+                                        Assumenda dolore
+                                        nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum
+                                        distinctio?
+                                        Exercitationem, vel dolorum.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="d-flex col-12 col-md-6 justify-content-center link1">
+                            <div class="fotos transporte d-block bg-secondary">
+                                <div class="hidden text-center p-5">
+                                    <h3>TRANSPORTE</h3>
+                                    <p class="oculta">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni id laudantium
+                                        consequatur?
+                                        Assumenda dolore
+                                        nobis doloribus, qui veniam ipsam tempora, nesciunt odio quidem minima soluta nostrum
+                                        distinctio?
+                                        Exercitationem, vel dolorum.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+        </article>
+
+       <!--  Formulario de contacto -->
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h1>Gracias por contactarme</h1>    
+                </div>
+                <div class="col-12">
+                    <form method="POST" action="registrado.html" id="contactoId" onsubmit="return Contactar()" name="contacto">
+                        <div class="form-row">
+                            <div class="form-group mb-3">
+                                <label for="nombre">Nombre</label>
+                                <input name="nombre" type="text" id="nombre" class="form-control mt-3" placeholder="Tu nombre">
+                                <div class="invalid-feedback mb-3" id="errorNombre"></div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="apellido">Apellido</label>
+                                <input name="apellido" type="text" id="apellido" class="form-control mt-3" placeholder="Tu apellido">
+                                <div class="invalid-feedback mb-3" id="errorApellido1"></div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="correo">Correo electrónico</label>
+                                <input name="correo" type="text" id="correo" class="form-control mt-3"
+                                    placeholder="Tu correo electrónico">
+                                <div class="invalid-feedback mb-3" id="errorCorreo"></div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea placeholder="Escribe tu mensaje, puedes usar un máximo de 500 carácteres" class="form-control mt-3" name="mensaje" id="mensaje"
+                                    cols="30" rows="5" onkeyup="countChars(this);"></textarea>
+                                <p id="charNum">Puedes usar 500 carácteres</p>
+                                <div class="invalid-feedback mb-3" id="errorMensaje"></div>
+                            </div>
+                        </div>
+                        <div class="d-inline-block float-end">
+                            <button class="btn-success btn mt-3" type="submit">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-fluid"> -->
+            <!-- Footer -->
+            <footer class="text-center text-white" style="background-color: #3f51b5">
+                <!-- Grid container -->
+                <div class="container-fluid">
+                    <!-- Section: Links -->
+                    <section class="mt-5">
+                        <!-- Grid row-->
+                        <div class="row text-center d-flex justify-content-between align-items-center pt-4">
+                            <!-- Grid column -->
+                                <div class="col-6 col-md-12 mb-md-3">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Home</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Retratos</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Bodas y Eventos</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Productos Comerciales</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Fotos Familiares</a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-12 ">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-md-offset-3 col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Sobre Mi</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                                
+                                        <!-- Grid column -->
+                                        <div class="col-md-2">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Contacto</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                                
+                                        <!-- Grid column -->
+                                        <div class="col-md-2 col-md-offset-3">
+                                            <h6 class="text-uppercase font-weight-bold">
+                                                <a href="#!" class="text-white">Blog</a>
+                                            </h6>
+                                        </div>
+                                        <!-- Grid column -->
+                                </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row-->
+                    </section>
+                    <!-- Section: Links -->
+        
+                    <hr class="my-4" />
+        
+                    <!-- Section: Text -->
+                    <section class="mb-4">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-8">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                                    distinctio earum repellat quaerat voluptatibus placeat nam,
+                                    commodi optio pariatur est quia magnam eum harum corrupti
+                                    dicta, aliquam sequi voluptate quas.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Text -->
+        
+                    <!-- Section: Social -->
+                    <section class="text-center mb-4">
+                        <a href="" class="text-white me-4">
+                            <i class="bi-facebook"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="bi-twitter"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="bi-google"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="bi-instagram"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="bi-linkedin"></i>
+                        </a>
+                        <a href="" class="text-white me-4">
+                            <i class="bi-github"></i>
+                        </a>
+                    </section>
+                    <!-- Section: Social -->
+                </div>
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2021 Copyright:
+                    <a class="text-white" href="#!">nessaodon.com</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
+        </div>
+        <!-- End of .container -->
+
+
+ 
+
+    
+     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script> -->
+    
+
+    <!-- Conectado por CDN-->
+
+    <!--Jquery -->
+    
+    <script src="jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/formulario_jquery.js"></script>
+    <script src="js/formulario.js" type="text/javascript"></script>
+
+   
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+
+</html>
